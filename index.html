@@ -5,205 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Materials/Blanks</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      height: 100vh;
-      background: #f5f5f5;
-    }
-    .sidebar {
-      width: 80px;
-      background-color: #fff;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-right: 1px solid #ccc;
-    }
-    .nav-top {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-    .nav-button {
-      width: 40px;
-      height: 40px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      background-color: white;
-      background-size: cover;
-      background-position: center;
-      cursor: pointer;
-    }
-    .nav-button.active {
-      background-color: #f0f0fa;
-    }
-    .nav-bottom {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      padding-bottom: 10px;
-    }
-    .collapse-button {
-      width: 30px;
-      height: 30px;
-      border: none;
-      border-radius: 50%;
-      background-color: red;
-      color: #ecf0f1;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .profile-pic {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      overflow: hidden;
-      background-color: #bdc3c7;
-    }
-    .profile-pic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .main {
-      flex: 1;
-      padding: 20px 30px;
-      overflow-y: auto;
-      background: #fff;
-    }
-    .main-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    .main-header h1 {
-      font-size: 24px;
-      color: #333;
-    }
-    .main-header h1 .blanks {
-      color: grey;
-    }
-    .switch {
-      display: inline-flex;
-      background-color: #e0e0e0;
-      padding: 3px;
-      border-radius: 4px;
-      gap: 3px;
-    }
-    .switch button {
-      border: none;
-      padding: 6px 12px;
-      cursor: pointer;
-      font-size: 14px;
-      border-radius: 2px;
-      background: transparent;
-      color: grey;
-    }
-    .switch button.active {
-      background: #fff;
-      color: #000;
-    }
-    .control-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-    .left-controls {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .left-controls input[type="text"] {
-      padding: 6px 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    .left-controls button {
-      padding: 6px 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      background: #f0f0f0;
-      cursor: pointer;
-      font-size: 14px;
-    }
-    .add-new-button {
-      background-color: #464ba0;
-      color: #fff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-    .item-list {
-      list-style: none;
-    }
-    .item {
-      display: flex;
-      align-items: center;
-      padding: 10px;
-      border-bottom: 1px solid #eee;
-    }
-    .item img {
-      width: 50px;
-      height: 50px;
-      object-fit: cover;
-      margin-right: 15px;
-      border: 1px solid #ccc;
-    }
-    .item-name {
-      flex: 1;
-      font-size: 16px;
-      color: #333;
-    }
-    .item-control {
-      display: flex;
-      border: 1px solid #ccc;
-      min-width: 250px;
-    }
-    .control-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4px;
-      border-right: 1px solid #ccc;
-      flex-grow: 1;
-    }
-    .control-item:last-child {
-      border-right: none;
-    }
-    .control-quantity {
-      display: flex;
-      flex-direction: column;
-      width: 80px;
-    }
-    .quantity-item {
-      width: 100%;
-      text-align: center;
-      padding: 4px;
-      border-bottom: 1px solid #ccc;
-    }
-    .quantity-item:last-child {
-      border-bottom: none;
-    }
-    .item-control button {
-      border: none;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; display: flex; height: 100vh; background: #f5f5f5; }
+    .sidebar { width: 80px; background-color: #fff; color: #333; display: flex; flex-direction: column; justify-content: space-between; padding: 10px 0; border-right: 1px solid #ccc; }
+    .nav-top { display: flex; flex-direction: column; align-items: center; gap: 15px; margin-bottom: 20px; }
+    .nav-button { width: 40px; height: 40px; border: 1px solid #ccc; border-radius: 4px; background-color: white; background-size: cover; background-position: center; cursor: pointer; }
+    .nav-button.active { background-color: #f0f0fa; }
+    .nav-bottom { display: flex; flex-direction: column; align-items: center; gap: 10px; padding-bottom: 10px; }
+    .collapse-button { width: 30px; height: 30px; border: none; border-radius: 50%; background-color: red; color: #ecf0f1; cursor: pointer; font-size: 16px; }
+    .profile-pic { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; background-color: #bdc3c7; }
+    .profile-pic img { width: 100%; height: 100%; object-fit: cover; }
+    .main { flex: 1; padding: 20px 30px; overflow-y: auto; background: #fff; }
+    .main-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .main-header h1 { font-size: 24px; color: #333; }
+    .main-header h1 .blanks { color: grey; }
+    .switch { display: inline-flex; background-color: #e0e0e0; padding: 3px; border-radius: 4px; gap: 3px; }
+    .switch button { border: none; padding: 6px 12px; cursor: pointer; font-size: 14px; border-radius: 2px; background: transparent; color: grey; }
+    .switch button.active { background: #fff; color: #000; }
+    .control-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
+    .left-controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .left-controls input[type="text"] { padding: 6px 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+    .left-controls button { padding: 6px 10px; border: 1px solid #ccc; border-radius: 4px; background: #f0f0f0; cursor: pointer; font-size: 14px; }
+    .add-new-button { background-color: #464ba0; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px; }
+    .item-list { list-style: none; }
+    .item { display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee; }
+    .item img { width: 50px; height: 50px; object-fit: cover; margin-right: 15px; border: 1px solid #ccc; }
+    .item-name { flex: 1; font-size: 16px; color: #333; }
+    .item-control { display: flex; border: 1px solid #ccc; min-width: 250px; }
+    .control-item { display: flex; align-items: center; justify-content: center; padding: 4px; border-right: 1px solid #ccc; flex-grow: 1; }
+    .control-item:last-child { border-right: none; }
+    .control-quantity { display: flex; flex-direction: column; width: 80px; }
+    .quantity-item { width: 100%; text-align: center; padding: 4px; border-bottom: 1px solid #ccc; }
+    .quantity-item:last-child { border-bottom: none; }
+    .item-control button { border: none; background: transparent; }
   </style>
 </head>
 <body>
